@@ -2780,8 +2780,7 @@
 
 .projects-wrap {
   margin-top: 250px;
-  position: relative;
-  overflow-x: hidden; }
+  position: relative; }
   .projects-wrap .icon-left-open, .projects-wrap .icon-right-open {
     position: absolute;
     top: 50%;
@@ -2806,7 +2805,8 @@
   display: none;
   justify-content: space-evenly;
   align-items: center;
-  animation-duration: 0.5s; }
+  animation-duration: 0.5s;
+  overflow-x: hidden; }
 
 .active-project {
   display: flex; }
