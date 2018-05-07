@@ -1,0 +1,280 @@
+.hero {
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    background: url("../images/circuit.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    @include mq(1024px) {
+        height: 700px;
+    }
+    @include mq(768px) {
+        height: 500px;
+    }
+}
+
+#particles-js {
+    background: rgba(0,0,0, 0.8);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 0;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+
+@include mq-L(1022px) {
+    .nav {
+        display: inline-block;
+        z-index: 1;
+        .logo-slide {
+            display: none;
+        }
+        ul {
+            list-style-type: none;
+        }
+        li {
+            display: inline-block;
+            a {
+                text-decoration: none;
+                margin-right: 20px;
+                text-transform: uppercase;
+                font-weight: bold;
+                font-family: $theme-font;
+                color: $white;
+                &:hover {
+                    color: $blue-light;
+                }
+            }
+        }
+        .active {
+            a {
+            color: $blue-light;
+            }
+        }
+    }
+}
+
+@include mq(1021px) {
+    .navigation {
+        .nav {
+            opacity: 0;
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            right: -320px;
+            width: 320px;
+            background: $footer-bg;
+            z-index: 2;
+            overflow: hidden;
+            transition: all 0.5s ease-in-out;
+            padding: 25px 60px;
+        }
+        .logo-slide {
+            width: 150px;
+            display: inline-block;
+            z-index: 1;
+            img {
+                width: 100%;
+            }
+        }
+        ul {
+            list-style-type: none;
+        }
+        li {
+            font-size: 16px;
+            text-transform: uppercase;
+            margin: 40px 0;
+            text-decoration: none;
+            margin-right: 20px;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-family: $theme-font;
+            color: $white;
+            &:hover {
+                color: $blue-light;
+            }
+        }
+        .nav-open {
+            right: 0;
+            transition: .5s;
+            opacity: 1;
+        }
+    }
+    .menu-icon {
+        position: absolute;
+        top: 27px;
+        right: 10%;
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+        .hamburger-menu {
+            width: 50px;
+            height: 3px;
+            background: $white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: .5s;
+            &::before, &::after {
+                content: '';
+                position: absolute;
+                width: 50px;
+                height: 3px;
+                background: $white;
+                transition: .5s;
+                @include mq(400px) {
+                    width: 30px
+                }
+            }
+            &::before {
+                top: -10px;
+            }
+            &::after {
+                top: 10px;
+            }
+            @include mq(400px) {
+                width: 30px;
+                top: 18px;
+            }
+        }
+    }
+    .close-menu {
+        position: absolute;
+        width: 20px;
+        height: 2px;
+        background: #fff;
+        right: 15px;
+        top: 30px;
+        transform: rotate(45deg);
+        &::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 2px;
+            top: -5px;
+            background: #fff;
+            transform: rotate(-89deg) translateX(-5px);
+        }
+    }
+    .active {
+        a {
+        color: $blue-light;
+        }
+    }
+}
+
+.alt-nav-scroll {
+    background-color: rgba($black, 0.5);
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 3;
+    padding: 10px 17%;
+    animation: fadeIn 0.4s ease-in-out;
+    .logo {
+        @include mq(1200px) {
+            width: 150px;
+        }
+    }
+    li {
+        @include mq(1200px) {
+            font-size: 14px;
+        }
+    }
+    .menu-icon {
+        top: 7px;
+        @include mq(400px) {
+            padding: 10px 5%;
+            top: 14px;
+        }
+    }
+    @include mq(767px) {
+        padding: 10px 9%;
+    }
+}
+
+.logo {
+    width: 230px;
+    display: inline-block;
+    z-index: 1;
+    img {
+        width: 100%;
+    }
+    @include mq(400px) {
+        width: 170px;
+    }
+}
+
+.intro {
+    width: 600px;
+    position: relative;
+    z-index: 1;
+    @include mq(768px) {
+        width: 400px;
+    }
+    @include mq(500px) {
+        width: 290px;
+    }
+    h1, p {
+        color: $white;
+        font-family: $theme-font;
+    }
+    h1 {
+        font-size: 60px;
+        @include mq(768px) {
+            font-size: 42px;
+        }
+        @include mq(500px) {
+            font-size: 30px;
+        }
+    }
+    p {
+        margin-top: 20px;
+        @include mq(768px) {
+            font-size: 14px;
+        }
+        @include mq(500px) {
+            font-size: 14px;
+        }
+    }
+}
+
+.intro-wrap {
+    padding-top: 20%;
+    @include mq(768px) {
+        padding-top: 22%;
+    }
+}
+
+.cta {
+    background: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $white;
+    width: 250px;
+    height: 50px;
+    border: 1px solid rgba($blue-light, 0.5);
+    border-radius: 100px;
+    margin-top: 50px;
+    font-family: $theme-font;
+    font-size: 20px;
+    letter-spacing: 1.7px;
+    cursor: pointer;
+    &:hover {
+        background: rgba($blue-light, 0.5);
+        transition: all 0.1s ease-in-out
+    }
+    @include mq(500px) {
+        width: 150px;
+        font-size: 14px;
+    }
+}
+

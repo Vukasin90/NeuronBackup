@@ -1,0 +1,196 @@
+//Location section
+.location {
+    padding: 100px 0 200px;
+    width: 100%;
+    background: $white;
+    @include clear-fix;
+    overflow-x: hidden;
+    h2 {
+        text-align: center;
+        font-size: 40px;
+    }
+    iframe {
+        box-shadow: 0 0 20px rgba(0,0,0,0.25);
+        float: right;
+        width: 850px;
+        height: 450px;
+        @include mq(1368px) {
+            width: 450px;
+        }
+        @include mq(900px) {
+            float: none;
+            margin-top: 50px;
+            width:100%;
+        }
+    }
+}
+
+.location-wrapper {
+    padding-top: 200px;
+    @include mq(900px) {
+        padding-top: 100px;
+    }
+}
+
+.office {
+    display: inline-block;
+    h3 {
+        font-size: 30px;
+        font-family: $theme-font;
+        font-weight: bold;
+    }
+    .office-location {
+        margin-top: 50px;
+        display: inline-block;
+        font-size: 25px;
+    }
+    ul {
+        margin-top: 20px;
+    }
+    li {
+        list-style-type: none;
+        margin-top: 10px;
+        font-size: 22px;
+        font-family: $theme-font;
+        span {
+            display: inline-block;
+            margin-right: 10px;
+            color: $blue-light;
+        }
+    }
+    @include mq(900px) {
+        display: block;
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+    }
+}
+
+
+
+// Contact section
+
+.contact {
+    padding: 100px 0 200px;
+    background: linear-gradient($white, $white, rgba($footer-bg, 0.5), rgba($footer-bg, 0.9));
+    box-shadow: 0px -36px 84px rgba(0, 0, 0, 0.2);
+    position: relative;
+    // overflow-x: hidden;
+    h3 {
+        text-align: center;
+        font-size: 40px
+    }
+    @include mq(850px) {
+        padding: 100px 0 0px;
+    }
+    @include mq(500px) {
+        background: $white;
+    }
+}
+
+.contact-form {
+    margin: 200px auto;
+    padding: 30px 50px 100px;
+    width: 800px;
+    text-align: center;
+    background: $white;
+    box-shadow: 0px 10px 20px rgba($black, 0.25);
+    overflow-x: hidden;
+    form {
+        margin-top: 50px;
+    }
+    .form {
+        margin-bottom: 10px;
+        padding-left: 20px;
+        height: 40px;
+        border-radius: 40px;
+        border: 2px solid rgba($blue-light, 0.5);
+        font-family: $theme-font;
+        transition: border 0.3s ease-in-out;
+        background: $white;
+        &:focus {
+            outline: 0;
+            background: rgba($white, 1);
+            border: 2px solid rgba($blue-light, 1);
+            transition: border 0.3s ease-in-out;
+        }
+        @include mq(850px) {
+            display: block;
+            width: 100%;
+        }
+    }
+    h3 {
+        font-size: 30px;
+        font-family: $theme-font;
+        font-weight: bold;
+    }
+    @include mq(850px) {
+        width: 95%;
+        padding: 30px 5px 100px;
+        margin: 50px auto;
+    }
+    @include mq(500px) {
+        width: 100%;
+        padding: 30px 5px 100px;
+        margin: 50px auto;
+    }
+}
+
+.form-name {
+    width: 49%;
+}
+
+.form-email {
+    width: 49%;
+    margin-left: 1%;
+    @include mq(850px) {
+        margin: 0;
+    }
+}
+
+.form-subject {
+    display: block;
+    width: 100%;
+}
+
+.form-message {
+    width: 100%;
+    border-radius: 20px;
+    border: 2px solid rgba($blue-light, 0.5);
+    transition: border 0.3s ease-in-out;
+    resize: none;
+    padding: 10px 20px;
+    font-family: $theme-font;
+    &:focus {
+        outline: 0;
+        background: rgba($white, 1);
+        border: 2px solid rgba($blue-light, 1);
+        transition: border 0.3s ease-in-out;
+    }
+}
+
+.form-submit {
+    width: 100px;
+    height: 40px;
+    margin: 10px 0 0 auto;
+    display: block;
+    background: none;
+    padding: 0;
+    border-radius: 40px;
+    border: none;
+    font-family: $theme-font; 
+    text-transform: uppercase;
+    font-weight: bold;
+    background: $blue-light;
+    cursor: pointer;
+    transition: all ease-in-out 0.1s;
+    letter-spacing: 1px;
+    &:focus {
+        outline: 0;
+    }
+    &:hover {
+        border: none;
+        color: $white;
+        transition: all ease-in-out 0.2s;
+    }
+}
