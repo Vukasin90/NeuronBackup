@@ -125,4 +125,22 @@ $( document ).ready(function() {
             });
         }
     });
+
+    //Form spam proof
+    var randomNum1 = Math.floor((Math.random() *10) + 1 );
+    var randomNum2 = Math.floor((Math.random() *10) + 1 );
+    var mathSolution = randomNum1 + randomNum2;
+    
+    $('.first-random-num').html(randomNum1 +' +');
+    $('.second-random-num').html(randomNum2 + ' ?');
+
+    $('.form-submit').click(function(e) {
+        var answer = $('.answer').val();
+        if(answer != mathSolution) {
+            e.preventDefault();
+            $('.answer').trigger('reset');
+            alert('Nije tacan rezultat');
+        } 
+    });
+
 });

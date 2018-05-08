@@ -72,16 +72,15 @@
 
 .contact {
     padding: 100px 0 200px;
-    background: linear-gradient($white, $white, rgba($footer-bg, 0.5), rgba($footer-bg, 0.9));
-    box-shadow: 0px -36px 84px rgba(0, 0, 0, 0.2);
+    background: linear-gradient($white, $white, $white, $white, rgba($footer-bg, 0.5), rgba($footer-bg, 0.9));
+    box-shadow: 0px -41px 128px rgba($black, 0.1);
     position: relative;
-    // overflow-x: hidden;
     h3 {
         text-align: center;
         font-size: 40px
     }
     @include mq(850px) {
-        padding: 100px 0 0px;
+        padding: 100px 0 10px;
     }
     @include mq(500px) {
         background: $white;
@@ -172,7 +171,8 @@
 .form-submit {
     width: 100px;
     height: 40px;
-    margin: 10px 0 0 auto;
+    margin: 10px 0 0;
+    float: right;
     display: block;
     background: none;
     padding: 0;
@@ -192,5 +192,24 @@
         border: none;
         color: $white;
         transition: all ease-in-out 0.2s;
+    }
+}
+
+.validation {
+    float: left;
+    margin: 10px 0 0;
+}
+
+.answer {
+    width: 50px;
+    height: 40px;
+    border-radius: 50px;
+    text-align: center;
+    border: 1px solid $blue-light;
+    margin-left: 10px;
+    &:focus {
+        outline: 0;
+        border: 2px solid rgba($blue-light, 1);
+        transition: border 0.3s ease-in-out;
     }
 }

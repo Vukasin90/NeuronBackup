@@ -114,7 +114,7 @@
         height: 50px;
         cursor: pointer;
         .hamburger-menu {
-            width: 50px;
+            width: 35px;
             height: 3px;
             background: $white;
             position: absolute;
@@ -125,7 +125,7 @@
             &::before, &::after {
                 content: '';
                 position: absolute;
-                width: 50px;
+                width: 35px;
                 height: 3px;
                 background: $white;
                 transition: .5s;
@@ -177,8 +177,9 @@
     right: 0;
     z-index: 3;
     padding: 10px 17%;
-    animation: fadeIn 0.4s ease-in-out;
+    animation: fadeIn 0.7s ease-in-out;
     .logo {
+        width: 180px;
         @include mq(1200px) {
             width: 150px;
         }
@@ -247,7 +248,7 @@
 }
 
 .intro-wrap {
-    padding-top: 20%;
+    padding-top: 30vh;
     @include mq(768px) {
         padding-top: 22%;
     }

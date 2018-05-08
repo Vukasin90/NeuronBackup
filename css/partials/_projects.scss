@@ -7,6 +7,9 @@
         font-size: 30px;
         text-transform: uppercase;
     }
+    @include mq(850px) {
+        padding: 100px 0 100px;
+    }
 }
 
 .projects-wrap {
