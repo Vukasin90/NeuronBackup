@@ -5,6 +5,7 @@
     background: url("../images/circuit.jpg");
     background-attachment: fixed;
     background-repeat: no-repeat;
+    background-size: cover;
     @include mq(1024px) {
         height: 700px;
     }

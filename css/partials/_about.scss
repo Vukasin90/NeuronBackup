@@ -20,7 +20,12 @@
 // Not Flex supported 
 .about {
     padding: 150px 0 250px;
-    background: linear-gradient($white, $white, $white,  rgba($black, 0.35));
+    background: url("../images/conference-room.jpeg");
+    background-attachment: fixed;
+    background-position-y: -400px;
+    background-repeat: no-repeat;
+    background-size: auto;
+    border-top: 6px solid $black;
     overflow-x: hidden;
     h2 {
         color: $black;

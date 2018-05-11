@@ -2439,7 +2439,8 @@
   height: 100vh;
   background: url("../images/circuit.jpg");
   background-attachment: fixed;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  background-size: cover; }
   @media (max-width: 1024px) {
     .hero {
       height: 700px; } }
@@ -2686,7 +2687,12 @@
     text-align: center; } }
 .about {
   padding: 150px 0 250px;
-  background: linear-gradient(#fff, #fff, #fff, rgba(0, 0, 0, 0.35));
+  background: url("../images/conference-room.jpeg");
+  background-attachment: fixed;
+  background-position-y: -400px;
+  background-repeat: no-repeat;
+  background-size: auto;
+  border-top: 6px solid #000;
   overflow-x: hidden; }
   .about h2 {
     color: #000;
@@ -2773,16 +2779,18 @@
     right: 1px; }
 
 .projects {
-  padding: 100px 0 300px;
-  background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35), #fff);
-  overflow-x: hidden; }
+  padding: 100px 0 400px;
+  background: url("../images/projects.jpeg");
+  background-attachment: fixed;
+  background-size: cover;
+  border-top: 6px solid #000; }
   .projects h2 {
     text-align: center;
     font-size: 30px;
     text-transform: uppercase; }
   @media (max-width: 850px) {
     .projects {
-      padding: 100px 0 100px; } }
+      padding: 100px 0 150px; } }
 
 .projects-wrap {
   margin-top: 250px;
@@ -2811,8 +2819,7 @@
   display: none;
   justify-content: space-evenly;
   align-items: center;
-  animation-duration: 0.5s;
-  overflow-x: hidden; }
+  animation-duration: 0.5s; }
 
 .active-project {
   display: flex; }
@@ -2849,6 +2856,36 @@
       margin-top: 20px;
       width: 300px; } }
 
+.all-proj-cta {
+  position: absolute;
+  bottom: -236px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 180px;
+  height: 50px;
+  border: 1px solid #00C1DE;
+  border-radius: 5px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
+  background: none;
+  text-transform: uppercase;
+  font-family: "Nanum Gothic", sans-serif;
+  font-size: 14px;
+  color: #00C1DE;
+  cursor: pointer;
+  animation: cta-animation 1s linear 2s infinite alternate; }
+  .all-proj-cta:hover {
+    font-weight: bold;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    transition: all 0.2s ease-in-out; }
+  @media (max-width: 850px) {
+    .all-proj-cta {
+      bottom: -116px; } }
+
+@keyframes cta-animation {
+  0% {
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25); }
+  100% {
+    box-shadow: 5px 10px 15px rgba(0, 193, 222, 0.25); } }
 .hero-projects {
   width: 100%;
   height: 300px;
