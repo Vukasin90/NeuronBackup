@@ -4,20 +4,20 @@
     background-attachment: fixed;
     background-size: cover;
     border-top: 6px solid $black;
+    overflow-x: hidden;
     h2 {
         text-align: center;
         font-size: 30px;
         text-transform: uppercase;
     }
     @include mq(850px) {
-        padding: 100px 0 150px;
+        padding: 100px 0 270px;
     }
 }
 
 .projects-wrap {
     margin-top: 250px;
     position: relative;
-    // overflow-x: hidden;
     .icon-left-open, .icon-right-open {
         position: absolute;
         top: 50%;

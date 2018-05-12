@@ -2703,6 +2703,9 @@
   @media (max-width: 767px) {
     .about {
       padding: 55px 0 50px; } }
+  @media (max-width: 500px) {
+    .about {
+      background: #fff; } }
 
 .what-we-do {
   display: flex;
@@ -2783,14 +2786,15 @@
   background: url("../images/projects.jpeg");
   background-attachment: fixed;
   background-size: cover;
-  border-top: 6px solid #000; }
+  border-top: 6px solid #000;
+  overflow-x: hidden; }
   .projects h2 {
     text-align: center;
     font-size: 30px;
     text-transform: uppercase; }
   @media (max-width: 850px) {
     .projects {
-      padding: 100px 0 150px; } }
+      padding: 100px 0 270px; } }
 
 .projects-wrap {
   margin-top: 250px;
@@ -2976,7 +2980,10 @@
 .location {
   padding: 100px 0 200px;
   width: 100%;
-  background: #fff;
+  background: url("../images/contact.jpeg");
+  background-attachment: fixed;
+  background-size: cover;
+  border-top: 6px solid #000;
   content: '';
   clear: both;
   display: table;

@@ -2,7 +2,10 @@
 .location {
     padding: 100px 0 200px;
     width: 100%;
-    background: $white;
+    background: url("../images/contact.jpeg");
+    background-attachment: fixed;
+    background-size: cover;
+    border-top: 6px solid $black;
     @include clear-fix;
     overflow-x: hidden;
     h2 {

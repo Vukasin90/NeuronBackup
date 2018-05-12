@@ -37,6 +37,9 @@
     @include mq(767px) {
         padding: 55px 0 50px;
     }
+    @include mq(500px) {
+        background: $white;
+    }
 }
 
 .what-we-do {
