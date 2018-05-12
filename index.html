@@ -133,9 +133,9 @@
         <h3>Contact</h3>
         <div class="contact-form" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="1200">
             <h3>Get in touch with us</h3>
-            <form>
+            <form method="POST" action="contactform.php">
                 <input type="text" class="form form-name" name="full-name" placeholder="First and last name">
-                <input type="text" class="form form-email" name="email" placeholder="Your email">
+                <input type="text" class="form form-email" name="mail" placeholder="Your email">
                 <input type="text" class="form form-subject" name="subject" placeholder="Subject">
                 <textarea name="message" class=" form-message" cols="30" rows="10" placeholder="Your message..."></textarea>
                 <div class="validation">
@@ -143,7 +143,7 @@
                     <span class="second-random-num"></span>
                     <input type="text" class="answer" value="" title="Please type in the correct answer!">
                 </div>
-                <input type="submit" value="Send" class="form-submit">
+                <button type="submit" class="form-submit">Send</button>
             </form>
         </div>
     </section>
