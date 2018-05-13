@@ -15,3 +15,13 @@
     @content;
     }
 }
+
+@mixin arrowDown($size) {
+        width: 0; 
+        height: 0; 
+        border-left: $size solid transparent;
+        border-right: $size solid transparent;
+        
+        border-top: $size solid $white;
+        @content;
+}

@@ -63,6 +63,9 @@
         box-shadow: 0px 10px 70px rgba($black, 0.25);
         transform: scale(1.001);
         transition: all 0.2s ease-in-out;
+        @include mq(546px) {
+            box-shadow: 0px 0px 0px;
+        }
     }
     img {
         width: 100px;

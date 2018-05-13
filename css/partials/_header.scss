@@ -59,6 +59,37 @@
             }
         }
     }
+
+    .dropdown-menu {
+        position: absolute;
+        min-width: 159px;
+        text-align: center;
+        top: 18px;
+        padding: 18px 0;
+        display: none;
+        li {
+            text-align: center;
+            a {
+                margin: 0;
+            }
+        }
+    }
+
+    .dropdown-toggle {
+        margin-right: 10px;
+    }
+
+    .dropdown-toggle::after {
+        content: '';
+        @include arrowDown(5px);
+        position: absolute;
+        right: 4px;
+        top: 8px;
+    }
+
+    .dropdown-toggle:hover .dropdown-menu {
+        display: block;
+    }
 }
 
 @include mq(1021px) {
@@ -197,6 +228,10 @@
             top: 14px;
         }
     }
+    .dropdown-menu {
+        background-color: rgba($black, 0.5);
+    }
+
     @include mq(767px) {
         padding: 10px 9%;
     }
