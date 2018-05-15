@@ -57,13 +57,13 @@
         <h2>What we do</h2>
         <div class="container">
             <div class="what-we-do">
-                <div class="card left" data-aos="fade-up-right" data-aos-anchor-placement="top-center">
+                <div class="card left" data-aos="flip-down" data-aos-anchor-placement="top-center">
                     <img src="images/ikonica-2-2.png" alt="ikonica1">
                     <h3>Software</h3>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis hic praesentium unde. Pariatur, recusandae vel, dignissimos maiores, autem ab error ullam nulla quas sunt incidunt?</p>
                     <button class="about-cta" onClick="location.href='/NeuronBackup/projects.html'">Find out more</button>
                 </div>
-                <div class="card right" data-aos="fade-down-left" data-aos-anchor-placement="top-center">
+                <div class="card right" data-aos="flip-down" data-aos-anchor-placement="top-center">
                     <img src="images/ikonica-3-1.png" alt="ikonica">
                     <h3>Industrial control equipment</h3>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis hic praesentium unde. Pariatur, recusandae vel, dignissimos maiores, autem ab error ullam nulla quas sunt incidunt?</p>
@@ -86,7 +86,7 @@
             </div>
             <div class="project animated jackInTheBox">
                 <div class="company-info">
-                    <img src="images/fsd-logo.jpg" alt="logo-firme">
+                    <img src="images/ikonica-2-2.png" alt="logo-firme">
                     <span>2Lorem ipsum dolor sit amet.</span>
                 </div>
                 <div class="about-project jackInTheBox">
@@ -95,7 +95,7 @@
             </div>
             <div class="project animated jackInTheBox">
                 <div class="company-info">
-                    <img src="images/fsd-logo.jpg" alt="logo-firme">
+                    <img src="images/ikonica-3-1.png" alt="logo-firme">
                     <span>2Lorem ipsum dolor sit amet.</span>
                 </div>
                 <div class="about-project">
@@ -104,7 +104,7 @@
             </div>
             <div class="project animated jackInTheBox">
                 <div class="company-info">
-                    <img src="images/fsd-logo.jpg" alt="logo-firme">
+                    <img src="images/circuit.jpg" alt="logo-firme">
                     <span>2Lorem ipsum dolor sit amet.</span>
                 </div>
                 <div class="about-project">
@@ -137,17 +137,19 @@
         <h3>Contact</h3>
         <div class="contact-form" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="1200">
             <h3>Get in touch with us</h3>
-            <form method="POST" action="contactform.php">
-                <input type="text" class="form form-name" name="full-name" placeholder="First and last name">
-                <input type="text" class="form form-email" name="mail" placeholder="Your email">
-                <input type="text" class="form form-subject" name="subject" placeholder="Subject">
-                <textarea name="message" class=" form-message" cols="30" rows="10" placeholder="Your message..."></textarea>
+            <form method="POST" action="https://formspree.io/vukasin90@gmail.com">
+                <input type="text" class="form form-name" name="name" placeholder="First and last name" required>
+                <input type="text" class="form form-email" name="_replyto" placeholder="Your email" required>
+                <input type="text" class="form form-subject" name="subject" placeholder="Subject" required>
+                <textarea name="message" class=" form-message" cols="30" rows="10" placeholder="Your message..." required></textarea>
                 <div class="validation">
                     <span class="first-random-num"></span>
                     <span class="second-random-num"></span>
                     <input type="text" class="answer" value="" title="Please type in the correct answer!">
                 </div>
                 <button type="submit" class="form-submit">Send</button>
+                <input type="hidden" name="_next" value="https://vukasin90.github.io/NeuronBackup/" />
+                <div class="form-warning"><strong>Please enter a correct answer! </strong></div>
             </form>
         </div>
     </section>

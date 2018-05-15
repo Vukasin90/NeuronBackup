@@ -40,6 +40,9 @@
     @include mq(500px) {
         background: $white;
     }
+    @include mq-L(1900px) {
+        background-size: cover;
+    }
 }
 
 .what-we-do {

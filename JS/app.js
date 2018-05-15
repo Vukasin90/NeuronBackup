@@ -139,8 +139,10 @@ $( document ).ready(function() {
         if(answer != mathSolution) {
             e.preventDefault();
             $('.answer').trigger('reset');
-            alert('Nije tacan rezultat');
-        } 
+            $('.form-warning').addClass('form-warning-activated');
+        } else {
+            $('.form-warning').removeClass('form-warning-activated');
+        }
     });
 
 });
